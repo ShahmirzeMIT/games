@@ -20,9 +20,9 @@ body {
     width: 150px;
     height: 30px;
     border: none;
-    background-color: blue;
     position: absolute;
     bottom: 0;
+    box-shadow: 1px 1px 10px lime, 1px 1px 20px lime inset;
 }
 
 .blockup {
@@ -30,13 +30,14 @@ body {
     height: 30px;
     margin: 10px;
     display: inline-block;
-    background-color: blue;
+    box-shadow: 1px 1px 20px lime inset;
 }
 
 #ball {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    bottom: 0;
     position: absolute;
     border-radius: 1px solid lime;
     box-shadow: 1px 1px 30px lime, inset 1px 1px 10px lime;

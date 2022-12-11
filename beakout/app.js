@@ -2,7 +2,7 @@ const container = document.querySelector('.container')
 let ball = document.getElementById('ball')
 const block = document.querySelector('.block')
 
-
+let barX = 0
 let ballX = 0
 let ballY = 0
 let ballDx = 5
@@ -15,16 +15,18 @@ for (let i = 0; i < 12; i++) {
 
 }
 
+function blocMovie() {
+    block.style.left = barX + "px"
+}
 
-container.addEventListener('mousemove', (e) => {
-
-    block.textContent = (e.offsetX - 150)
-    if (e.offsetX - 150 <= 0) {
-        block.style.left = e.offsetX + 'px'
-    } else {
-        block.style.left = e.offsetX - '150' + 'px'
+window.addEventListener('keydown', (e) => {
+    if (e.code == 'ArrowRight') {
+        if (barX < 530) barX += 10
+    } else if (e.code == 'ArrowLeft') {
+        if (barX > 0) barX -= 10
     }
 
+    blocMovie()
 })
 
 function movie() {
@@ -34,8 +36,6 @@ function movie() {
     ballY += ballDy
     ball.style.left = ballX + 'px'
     ball.style.bottom = ballY + 'px'
-
-
 
 }
 

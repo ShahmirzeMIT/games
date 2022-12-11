@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.list {
+    margin: 20px;
+    width: 350px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    color: lime;
+}
+
+.tst {
+    margin: 5px 20px;
+}
+
+.text {
+    font-size: 1.2em;
+    color: lime;
+    padding: 5px;
+}
