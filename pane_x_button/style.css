@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 70vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+p {
+    width: 100%;
+    color: lime;
+    font-weight: bold;
+}
+
+.edit {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    background-color: white;
+    color: lime;
+    cursor: pointer;
+}

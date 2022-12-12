@@ -29,14 +29,15 @@ window.addEventListener('keydown', (e) => {
     blocMovie()
 })
 
-function movie() {
+function move() {
     if (ballX < 0 || ballX >= 640) ballDx *= -1
     if (ballY < 0 || ballY >= 460) ballDy *= -1
     ballX += ballDx
     ballY += ballDy
     ball.style.left = ballX + 'px'
     ball.style.bottom = ballY + 'px'
+    block.textContent = `x=${ballY }  y=${ballY}`
 
 }
 
-setInterval(movie, 40)
+setInterval(move, 40)
