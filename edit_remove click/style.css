@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(68, 68, 66);
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    background-color: black;
+}
+
+.text {
+    color: lime;
+}
+
+#remove {
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+#edit {
+    position: absolute;
+    top: 0;
+    right: -25px;
+}
+
+#textAdd {
+    padding: 10px;
+    outline: none;
+    margin: 10px;
+}
+
+.btn {
+    padding: 8px;
+}
+
+.center {
+    text-align: center;
+    margin: 10px;
+}

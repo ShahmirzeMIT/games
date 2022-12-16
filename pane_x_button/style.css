@@ -28,3 +28,12 @@ p {
     color: lime;
     cursor: pointer;
 }
+
+.remove {
+    position: absolute;
+    top: 0;
+    right: -60px;
+    background-color: white;
+    color: lime;
+    cursor: pointer;
+}

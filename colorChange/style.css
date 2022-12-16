@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.red {
+    background-color: red;
+}
+
+.lime {
+    background-color: lime;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid rgb(rgb(39, 36, 36), rgb(76, 231, 76), rgb(133, 133, 214));
+}

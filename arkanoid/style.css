@@ -37,8 +37,15 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    bottom: 0;
+    bottom: 32px;
     position: absolute;
     border-radius: 1px solid lime;
     box-shadow: 1px 1px 30px lime, inset 1px 1px 10px lime;
+}
+
+.finished {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
 }
