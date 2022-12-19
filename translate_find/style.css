@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#colorMode {
+    height: 100vh;
+    position: relative;
+}
+
+
+/* .result {
+    border: 1px solid;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+} */
+
+#change {
+    font-size: 25px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+#change:hover {
+    cursor: pointer;
+}
+
+.txtcen {
+    text-align: right;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pointOutText {
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#write {
+    padding: 10px 35px;
+    outline: none;
+    align-self: stretch;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result {
+    width: 24%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    border: 1px solid black;
+    height: 100px;
+    overflow-y: scroll;
+}
