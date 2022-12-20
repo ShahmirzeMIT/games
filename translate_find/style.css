@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 86.9%;
 }
 
 .pointOutText {
@@ -63,4 +64,10 @@
     border: 1px solid black;
     height: 100px;
     overflow-y: scroll;
+}
+
+.darkMode * {
+    background-color: black;
+    color: lime;
+    border-color: lime;
 }
