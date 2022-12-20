@@ -31,6 +31,18 @@ body {
     right: -25px;
 }
 
+.remove {
+    position: absolute;
+    top: 0;
+    right: -50px;
+}
+
+.edit {
+    position: absolute;
+    top: 0;
+    right: -25px;
+}
+
 #textAdd {
     padding: 10px;
     outline: none;
