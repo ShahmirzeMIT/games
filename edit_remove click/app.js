@@ -1,37 +1,55 @@
-const text = document.querySelector('.text')
+const textAdd = document.getElementById('textAdd')
+const btn = document.querySelector('.btn')
+const keep = document.getElementById('keep')
+let metn;
+
+function call() {
+    let div = document.createElement('div')
+    div.classList.add('container')
+    let p = document.createElement('p')
+    p.classList.add('text')
+    p.textContent = "I should have gone to class, but I didn't"
+    let btnEdit = document.createElement('button')
+    btnEdit.classList.add('edit')
+    btnEdit.textContent = "🔁"
+    let btnRemove = document.createElement('button')
+    btnRemove.classList.add('remove')
+    btnRemove.textContent = "❌"
+    keep.append(div)
+    div.append(p, btnEdit, btnRemove)
+}
+
+call()
+let x = 0
+btn.onclick = () => {
+    call()
+
+}
+
 const remove = document.querySelector('.remove')
 const edit = document.querySelector('.edit')
 const container = document.querySelector('.container')
-const textAdd = document.getElementById('textAdd')
-const btn = document.querySelector('.btn')
-
-
-
+const text = document.querySelector('.text')
 remove.onclick = () => {
-    container.style.display = "none"
+    keep.children[x++].style.display = "none"
+
+    // console.log(container.len)
 }
 
 if (text.style.display != "none") {
     edit.addEventListener('click', () => {
-        let metn = prompt('hi make up friends please')
-        if (metn.length != null) {
+        metn = prompt('hi make up friends please')
+        let colorRed = text.style.color = "red"
+
+        if (metn != null && metn != "") {
             text.textContent = metn.replaceAll(":)", "😀")
+        } else if (metn == "") {
+            text.textContent = "bos niye saxlamisan mandalin 😡😡😡😡😡😡😡😡"
+            colorRed
+
+        } else {
+            text.textContent = "🤬 why why 🤬🤬🤬🤬🤬🤬"
+            colorRed
         }
     })
 }
-
-btn.addEventListener('click', () => {
-    let divCont = document.createElement('div')
-    divCont.classList.add('container')
-    let pText = document.createElement('p')
-    pText.textContent = " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae commodi architecto, vitae eius similique magni a sapiente quo alias! Obcaecati dolore cum, soluta porro recusandae autem consequuntur! Animi, voluptatem incidunt"
-    pText.classList.add('text')
-    let btnRemove = document.createElement('button')
-    btnRemove.classList.add('remove')
-    btnRemove.textContent = '❌'
-    let btnEdit = document.createElement('button')
-    btnEdit.classList.add('edit')
-    btnEdit.textContent = '🔁'
-    document.body.appendChild(divCont)
-    divCont.append(pText, btnRemove, btnEdit)
-})
