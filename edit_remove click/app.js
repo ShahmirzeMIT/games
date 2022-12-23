@@ -19,7 +19,7 @@ function Call() {
     div.setAttribute('id', `test${inc}`)
     let p = document.createElement('p')
     p.className = `text `
-    p.textContent = "Somtimes you get fell inside and I want to kill it"
+    p.textContent = textAdd.value
     let btnEdit = document.createElement('button')
     btnEdit.className = `edit`
     btnEdit.textContent = "🔁"
@@ -31,8 +31,8 @@ function Call() {
     let test = document.getElementById(`test${inc}`)
         // console.log(test)
     btnRemove.addEventListener('click', () => {
-        // test.style.display = "none"
-        test.remove()
+        test.style.display = "none"
+            // test.remove()
     })
     btnEdit.addEventListener('click', () => {
         let rewrite = prompt('hi, What do you want to write ')
