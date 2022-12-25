@@ -3,54 +3,45 @@ const change = document.getElementById('change')
 const pointOutText = document.querySelector('.pointOutText')
 const write = document.getElementById('write')
 const result = document.querySelector('.result')
-let words = [{
-        en: "Hi",
-        az: "Salam"
-    },
-    {
-        en: "Dad",
-        az: "Ata"
-    },
-    {
-        en: "Mom",
-        az: "Ana"
-    },
-    {
-        en: "Brother",
-        az: "Qardas"
-    },
-    {
-        en: "Sister",
-        az: "Bacı"
-    },
-    {
-        en: "Behalf of",
-        az: "Adına"
-    }
-]
 
-function random() {
-    let shuffle = Math.floor(Math.random() * words.length)
-    pointOutText.textContent = words[shuffle].en
+let langs = Math.floor(Math.random() * words.length)
+pointOutText.textContent = words[randomIndex()].en
+
+function show() {
+    let enterWord = write.value.trim().toLowerCase()
+    let wordAZ = words.find((e) => e.en == pointOutText.textContent).az.toLowerCase()
     let p = document.createElement('p')
-    p.textContent = words[shuffle].en
+    p.textContent += `${pointOutText.textContent} --`
+    if (enterWord == wordAZ) {
+        p.textContent += wordAZ
+    } else {
+
+        p.textContent += `(${enterWord}) ${wordAZ}`
+    }
     result.append(p)
+    write.value = ""
+    pointOutText.textContent = words[randomIndex()].en
 }
-random()
 
-
-
-
-
+function randomIndex() {
+    return Math.floor(Math.random() * words.length)
+}
 
 
 
 write.addEventListener('keydown', (e) => {
-    let text = write.value
-    if (e.key == "Enter" && text.length != "") {
-        console.log(text.trim())
+    if (e.key == "Enter") {
+        if (write.value.trim() !== "") {
+            show()
+        } else {
+            alert('enter word')
+
+        }
+
     }
+
 })
+
 
 
 
