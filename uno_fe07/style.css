@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.screen {
+    width: 80vw;
+    padding: 20px 0;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.player {
+    border: 2px solid;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    overflow-x: scroll;
+}
+
+.player .card {
+    flex-shrink: 0;
+}
+
+.stadium {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    height: 50%;
+    position: relative;
+}
+
+.card {
+    min-width: 50px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cardHIDDEN {
+    min-width: 50px;
+    width: 100px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cardHIDDEN::after {
+    content: "hidden";
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    color: lime;
+    border-radius: inherit;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.card>span {
+    position: absolute;
+    font-size: 32px;
+    font-family: ZenDots;
+    top: 5px;
+    left: 5px;
+    user-select: none;
+}
+
+
+.divStart {
+    width: 40%;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+
+.divStart img {
+    width: 100px;
+}
+
+.start.clicked {
+    display: none;
+}
+
+.style {
+    position: absolute;
+    top: 300px;
+    right: 20px;
+}
+
+
+.selected {
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    pointer-events: none;
+}
+
+.disableUserClick {
+    pointer-events: none !important;
+}
+
+.bazaar {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#bazaarBtn {
+    display: none;
+}
+
+#bazaarBtn i {
+    font-size: 32px;
+}

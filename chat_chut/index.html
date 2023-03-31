@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./chatchut.png" type="image/x-icon">
+    <title>Chat_Chut</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="chat-window">
+            <div id="valueModal">
+                <div class="value_modal_input_container">
+                    <button onclick="hideValueModal()" style="float:right;">X</button>
+                    <input type="text">
+                    <button id="valueModal_submit">submit</button>
+                </div>
+            </div>
+            <div class="chat-bar">
+                <h2><marquee>Chat and Chut</marquee></h2>
+                <div class="dot-container">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="dot-menu menu-closed">
+                        <button id="archiveMessages">archive messages</button>
+                        <button id="clearChat">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="message-container">
+                <div id="sentModal"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="message" placeholder="enter your message...">
+                <button id="sendBtn">send</button>
+                <button id="scrollToTop">/\</button>
+                <button id="scrollToBottom">\/</button>
+            </div>
+        </div>
+
+        <div class="archive-message-container menu-closed">
+            <div class="archive-message-container_btn_container">
+                <button id="clearArchiveMessages">
+                    <i class="fa-solid fa-brush"></i>
+                </button>
+                <button id="closeArchiveContainer">X</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
